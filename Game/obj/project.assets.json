@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mom11\\OneDrive\\Desktop\\CSharp\\Game\\Game.csproj",
+      "projectUniqueName": "C:\\Users\\mom11\\OneDrive\\Desktop\\Csharp\\Csharp\\Game\\Game.csproj",
       "projectName": "Game",
-      "projectPath": "C:\\Users\\mom11\\OneDrive\\Desktop\\CSharp\\Game\\Game.csproj",
+      "projectPath": "C:\\Users\\mom11\\OneDrive\\Desktop\\Csharp\\Csharp\\Game\\Game.csproj",
       "packagesPath": "C:\\Users\\mom11\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mom11\\OneDrive\\Desktop\\CSharp\\Game\\obj\\",
+      "outputPath": "C:\\Users\\mom11\\OneDrive\\Desktop\\Csharp\\Csharp\\Game\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
