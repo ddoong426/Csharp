@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Parameter.cs" />
     <Compile Remove="Start.cs" />
   </ItemGroup>
 
