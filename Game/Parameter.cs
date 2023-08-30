@@ -85,23 +85,23 @@ namespace Game
         static void Main(string[] args)
         {
             #region 매개 변수 한정자
-            // Function function = new Function();
-            // 
-            // int x = 10;
-            // int y = 20;
-            // int z;
-            // 
-            // // ref 키워드는 변수를 초기화해주어야 합니다.
-            // 
-            // function.GetData(ref x, ref y);
-            // 
-            // // out 키워드는 변수를 초기화해주지 않아도 됩니다.
-            // function.RayCast(out z);
-            // 
-            // function.Information(z);
-            // 
-            // Console.WriteLine("x의 값 : " + x);
-            // Console.WriteLine("y의 값 : " + y);
+            Function function = new Function();
+            
+            int x = 10;
+            int y = 20;
+            int z;
+            
+            // ref 키워드는 변수를 초기화해주어야 합니다.
+            
+            function.GetData(ref x, ref y);
+            
+            // out 키워드는 변수를 초기화해주지 않아도 됩니다.
+            function.RayCast(out z);
+            
+            function.Information(z);
+            
+            Console.WriteLine("x의 값 : " + x);
+            Console.WriteLine("y의 값 : " + y);
             #endregion
 
             #region 범위 기반 반복문
