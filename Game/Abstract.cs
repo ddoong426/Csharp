@@ -82,46 +82,49 @@ namespace Game
 
     internal class Abstract
     {
-        #region 인터페이스
-        // Weapon weapon = new Weapon();
-        // weapon.Attack();
-        // 
-        // Sword sword = new Sword();
-        // sword.Attack();
-        // 
-        // IEffect effect = sword;
-        // effect.Use();
-        #endregion
+        static void Main(string[] args)
+        {
+            #region 인터페이스
+            // Weapon weapon = new Weapon();
+            // weapon.Attack();
+            // 
+            // Sword sword = new Sword();
+            // sword.Attack();
+            // 
+            // IEffect effect = sword;
+            // effect.Use();
+            #endregion
 
-        #region 얕은 복사와 깊은 복사
-        // Armor armor1 = new Armor();
-        // armor1.Defense = 35;
-        // 
-        // // 객체를 얕은 복사하게 되면 스택에 있는 참조를 복사하는 것입니다.
-        // Armor armor2 = armor1;
-        // armor2.Defense = 65;
-        // 
-        // Armor armor3 = armor1.DeepCopy();
-        // armor3.Defense = 95;
-        // 
-        // Console.WriteLine("armor1.Defense : " + armor1.Defense);
-        // Console.WriteLine("armor2.Defense : " + armor2.Defense);
-        // Console.WriteLine("armor3.Defense : " + armor3.Defense);
-        #endregion
+            #region 얕은 복사와 깊은 복사
+            // Armor armor1 = new Armor();
+            // armor1.Defense = 35;
+            // 
+            // // 객체를 얕은 복사하게 되면 스택에 있는 참조를 복사하는 것입니다.
+            // Armor armor2 = armor1;
+            // armor2.Defense = 65;
+            // 
+            // Armor armor3 = armor1.DeepCopy();
+            // armor3.Defense = 95;
+            // 
+            // Console.WriteLine("armor1.Defense : " + armor1.Defense);
+            // Console.WriteLine("armor2.Defense : " + armor2.Defense);
+            // Console.WriteLine("armor3.Defense : " + armor3.Defense);
+            #endregion
 
-        #region 추상 클래스
-        // Sword sword1 = new Sword();
-        // 
-        // Weapon weapon = sword1;
-        // 
-        // weapon.Attack();
-        // weapon.Information();
-        #endregion
+            #region 추상 클래스
+            // Sword sword1 = new Sword();
+            // 
+            // Weapon weapon = sword1;
+            // 
+            // weapon.Attack();
+            // weapon.Information();
+            #endregion
 
-        // 느슨한 결합
-        // 클래스가 서로 엮여도 별 이상 없는 결합
+            // 느슨한 결합
+            // 클래스가 서로 엮여도 별 이상 없는 결합
 
-        // 강한 결합
-        // 한 쪽 클래스에서 문제나 수정사항이 생기면 서로 영향을 미치는 결합
+            // 강한 결합
+            // 한 쪽 클래스에서 문제나 수정사항이 생기면 서로 영향을 미치는 결합
+        }
     }
 }
