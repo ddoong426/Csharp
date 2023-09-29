@@ -6,95 +6,120 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Game
 {
+    public class Dog
+    {
+        private string name;
+        private int age;
+
+        public Dog()
+        {
+            age = 1;
+            name = "Alistar";
+        }
+
+        public void Eat()
+        {
+            Console.WriteLine("Eat");
+        }
+
+        public void Walk()
+        {
+            Console.WriteLine("Walk");
+        }
+
+        public string Representation()
+        {
+            return $"Name : {name}, Age : {age}";
+        }
+    }
+    class Information
+    {
+        public void Show(Dog dog)
+        {
+            Console.WriteLine(dog.Representation());
+        }
+
+
+    }
+
+    public abstract class TerranUnit
+    {
+        public abstract void Speak();
+
+
+    }
+
+    public class Marine : TerranUnit
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("마린 생성");
+        }
+    }
+    public class FireBet : TerranUnit
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("파이어벳 생성");
+        }
+    }
+
+    public class Ghost : TerranUnit
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("고스트 생성");
+        }
+    }
+
+    public class UnitManager
+    {
+        public void Create(TerranUnit unit)
+        {
+            unit.Speak();
+        }
+    }
+
+    public class Medic : TerranUnit
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("메딕 생성");
+        }
+    }
 
     internal class Program
     {
-        public class GameObject
+        static void Main(string[] args)
         {
-            // Run-Time 상수
-            // 선언과 동시에 초기화를 하지 않아도 됩니다.
-            readonly int itemID;
-
-
-            // Compile-Time 상수
-            // 선언과 동시에 초기화가 이루어져야 합니다.
-            const float pi = 3.141592f;
-            public GameObject()
-            {
-                // readonly는 생성자에서 단 한 번 초기화가 이루어집니다.
-                itemID = 33451;
-            }
-        }
-
-        static void Function1()
-        {
-            Function2();
-        }
-        #region 스택 풀기
-            // 예외가 발생한 함수에서 예외가 처리되지 않으면,
-            // 상위 함수로 돌아가서 예외를 처리하는 과정입니다.
-        static void Function2() 
-        {
-            // 클래스 * ptr = new 클래스();
-            throw new Exception("My Exception");
-                   
-        }
-        #endregion
-
-
-        static void Main(string[] args) 
-        {
-            #region 예외 처리
-
-            // int[] array = new int[3];
-            // try
-            // {
-            //     // int x = 10;
-            //     // int y = 0;
-            //     //
-            //     // int result = x / y;
+            #region 단일 책임 원칙 - SRP : Single-Responsibility Principle
+            // Module, class, function은 하나의 책임만 가져야 합니다.
+            // Dog dog = new Dog();
             // 
-            //     // for(int i=0; i<5; i++)
-            //     // {
-            //     //     array[i] = i;
-            //     // }
+            // Information info = new Information();
             // 
-            //     Function1();
-            // 
-            //     Console.WriteLine("Console");
-            // }
-            // catch (Exception error)
-            // {
-            //     Console.WriteLine(error);
-            // }
-            // finally
-            // {
-            //     Console.WriteLine("Close");
-            // }
-
+            // info.Show(dog);
             #endregion
 
-            #region 최소 공배수
-            // 
-            // int x = int.Parse(Console.ReadLine());
-            // int y = int.Parse(Console.ReadLine());
-            // int result = 1;
-            // 
-            // for (int i = 2; i <= x && i <= y; i++) 
-            // {
-            //     if (x % i == 0 && y % i == 0)
-            //     {
-            //         result *= i;
-            //         x /= i;
-            //         y /= i;
-            // 
-            //         i--;
-            //     }
-            // }
-            // Console.WriteLine(result * x * y);
-            // 
+            #region 개방 폐쇄 원칙 - OCP : Open-Closed Principle
+            // Module, class, function은 확장에 대해 열려 있어야 하며,
+            // 수정에 대해서는 닫혀 있어야 합니다.
+
+            // UnitManager unitManager = new UnitManager();
+            // unitManager.Create(new Marine());
+            // unitManager.Create(new FireBet());
+            // unitManager.Create(new Ghost());
+            // unitManager.Create(new Medic());
             #endregion
 
+            #region 인터페이스 분리 원칙
+            // 클라이언트는 자신이 사용하지 않는 함수에 대해
+            // 영향을 받지 않아야 하며, 인터페이스를 구체적이고 작은 단위의
+            // 역할로 인터페이스를 분리시켜 클라이언트가 꼭 필요한 함수만
+            // 이용할 수 있도록 해야합니다.
+
+
+            #endregion
         }
     }
 }
