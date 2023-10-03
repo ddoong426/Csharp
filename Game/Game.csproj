@@ -15,6 +15,7 @@
     <Compile Remove="Property.cs" />
     <Compile Remove="SOLID.cs" />
     <Compile Remove="Start.cs" />
+    <Compile Remove="VirtualFunction.cs" />
   </ItemGroup>
 
 </Project>

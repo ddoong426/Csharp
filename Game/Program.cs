@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-
     internal class Program
     {
         static void Main(string[] args)
         {
-            #region 가상 함수
-
-            #endregion
+            
         }
     }
 }
