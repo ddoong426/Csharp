@@ -26,6 +26,31 @@ namespace Game.Inventory
                     items[i] = item;
                     break;
                 }
+
+                if(i == items.Length - 1) 
+                {
+                    Console.WriteLine("인벤토리가 가득 찼습니다.");
+                }
+            }
+        }
+
+        public void Rendere()
+        {
+            for (int i = 0; i < items.Length; i++) 
+            {
+                if(i % lineX == 0) 
+                {
+                    Console.WriteLine(" ");
+                    Console.WriteLine(" ");
+                }
+                if (items[i] == null) 
+                {
+                    Console.Write("□ ");
+                }
+                else if (items[i]!=null) 
+                {
+                    Console.Write("■ ");
+                }
             }
         }
 
