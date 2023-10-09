@@ -16,5 +16,14 @@ namespace Game.Inventory
             this.price = price;
             this.name = name;
         }
+
+        public void Information()
+        {
+            Console.SetCursorPosition(0, 2);
+            Console.WriteLine($"name : {name}");
+
+            Console.SetCursorPosition(0, 4);
+            Console.WriteLine($"price : {price}");
+        }
     }
 }

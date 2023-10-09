@@ -6,13 +6,24 @@ using System.Threading.Tasks;
 
 namespace Game.Inventory
 {
+    public delegate void Function();
     internal class Cursor
     {
-        int x;
-        int y;
+        private int x;
+        private int y;
+        public Function function;
 
         ConsoleKeyInfo consoleKey;
 
+        public int X
+        {
+            get { return x; }
+        }
+
+        public int Y
+        {
+            get { return y; }
+        }
         public Cursor()
         {
             x = 0;
@@ -73,9 +84,9 @@ namespace Game.Inventory
                         y -= 4;
                     }
                     break;
-
-                case ConsoleKey.Q:
-                    return;
+                case ConsoleKey.Spacebar:
+                    function();
+                    break;
             }
         }
 

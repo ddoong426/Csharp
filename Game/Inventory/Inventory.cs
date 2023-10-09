@@ -10,6 +10,7 @@ namespace Game.Inventory
     {
         uint lineX;
         private Item[] items;
+        int select;
 
         public Inventory(uint x,uint y)
         {
@@ -31,6 +32,35 @@ namespace Game.Inventory
                 {
                     Console.WriteLine("인벤토리가 가득 찼습니다.");
                 }
+            }
+        }
+
+        public void SelectNumber(Cursor cursor)
+        {
+            int resultX = cursor.X / 2;
+            int resultY = cursor.Y / 2 * (int)lineX;
+
+            select = resultX + resultY - 20;
+        }
+
+        public void ShowItem()
+        {
+            if (items[select]!=null)
+            {
+                items[select].Information();
+            }
+            else 
+            {
+                Console.SetCursorPosition(0, 2);
+                Console.WriteLine("비어 있음.");
+            }
+        }
+
+        public void RemoveItem()
+        {
+            if (items[select] != null)
+            {
+                items[select] = null;
             }
         }
 
