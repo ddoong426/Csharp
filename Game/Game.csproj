@@ -11,6 +11,7 @@
     <Compile Remove="Abstract.cs" />
     <Compile Remove="Constant.cs" />
     <Compile Remove="File.cs" />
+    <Compile Remove="Inven.cs" />
     <Compile Remove="Parameter.cs" />
     <Compile Remove="Property.cs" />
     <Compile Remove="SOLID.cs" />

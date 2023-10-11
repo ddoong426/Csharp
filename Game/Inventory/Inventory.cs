@@ -45,7 +45,7 @@ namespace Game.Inventory
 
         public void ShowItem()
         {
-            if (items[select]!=null)
+            if (items[select] != null)
             {
                 items[select].Information();
             }
